@@ -1,0 +1,556 @@
+header{
+    color: #10133A;
+    font-size: 22px;
+}
+
+.header-row {
+    padding: 36px 0px 35px 0px;
+    max-height: 235px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 22px;
+}
+
+.header-contact>div{
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+}
+.header-contact>div a{
+    padding-left: 24px;
+}
+.header .logo{
+    transition: 0.7s;
+}
+.header .logo:hover{
+    fill: #777;
+   
+}
+.header-tel{
+    border: solid #10133A 2px;
+    border-radius: 50px;
+    padding: 26px 25px 25px 24px;
+}
+.header-nav{
+    background-color: #10133A;
+    min-height: 61px;
+    padding-top: 16px;
+    padding-left: 102px;
+    padding-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-nav ul{
+    display: flex;
+    column-gap: 264px;
+    color:  white;
+    
+}
+.home {
+	height: 728px;
+    padding-top: 169px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home-heading {
+	color: #10133A;
+	font-weight: 700;
+	font-size: 48px;
+    max-width: 691px;
+}
+
+.home-heading + * {
+	margin-top: 25px;
+}
+
+.home-text {
+	line-height: 41px;
+	max-width: 365px;
+    font-size: 30px;
+}
+.home-img
+{
+	position: relative;
+    width: 581px;
+    top: -330px;
+    left: 680px;
+}
+
+
+
+
+.pref>div{
+    background-color: #F4F5FF;
+    display: flex;
+    column-gap: 90px;
+    padding-top: 97px;
+    padding-bottom: 53px;
+}
+.btn-pref{
+    font-weight: 600;
+    align-self: flex-start;
+    text-align: start;
+}
+.btn-pref-active{
+    background-color: #10133A;
+    width: 439px;
+    min-height: 69px;
+    color: white;
+    font-weight: 700;
+    border-left: 5px solid;
+    border-image: 
+    linear-gradient(
+       to bottom, 
+       #F6CF45, 
+       #EF4621
+    ) 1 100%;
+    padding-left: 21px;
+}
+.nav-pref{
+   
+    display: flex;
+    flex-direction: column;
+    row-gap: 94px;
+    line-height: 30px;
+    min-height: 421px;
+    width: 440px;
+    border-right: 5px solid;
+    border-image: 
+    linear-gradient(
+       to top, 
+       #F6CF45, 
+       #EF4621
+    ) 1 100%;
+}
+.description{
+    width:621px;
+}
+.img{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(90deg, #EF4621 0%, #F6CF45 100%);
+    border-radius: 10px;
+    position: relative;
+    margin-left: 156px;
+    margin-bottom: 51px;
+    
+}
+.img-pref{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+.text{
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #343434;
+}
+.coach{
+    margin-bottom: 90px;
+}
+.coaches{
+    display: flex;
+    column-gap: 164px;
+    margin-top: 90px;
+}
+.coaches>div>h2{
+    font-weight: 700;
+    display: inline-block;
+    font-size: 36px;
+    line-height: 49px;
+    padding-bottom: 13px;
+    color: #10133A;
+    border-bottom: 3px solid black;
+    margin-bottom: 50px;
+    border-bottom: 3px solid;
+    border-image: 
+    linear-gradient(
+       to left, 
+       #F6CF45, 
+       #EF4621
+    ) 1;
+   
+}
+.coaches>div>p{
+    width: 532px;
+    min-height: 165px;
+}
+.trainings{
+    display: flex;
+    column-gap: 152px;
+    margin-top: 34x;
+}
+.trainings>div{
+    text-align: end;
+}
+.trainings>div>h2{
+    font-weight: 700;
+    display: inline-block;
+    font-size: 36px;
+    line-height: 49px;
+    padding-bottom: 14px;
+    color: #10133A;
+    border-bottom: 3px solid black;
+    margin-top: 66px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid;
+    border-image: 
+    linear-gradient(
+       to left, 
+       #F6CF45, 
+       #EF4621
+    ) 1;
+}
+.trainings>div>p{
+    width: 659px;
+    min-height: 165px;
+}
+
+
+.carousel {
+ 
+    position: relative;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #F4F5FF;
+     height: 617px;
+}
+    .carousel .carousel-indicators {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        list-style: none;
+    }
+        .carousel .carousel-indicators li {
+            flex: 0 1 auto;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            background-color: #343a40;
+            border: 2px solid #fff;
+            border-radius: 50%;
+        }
+        .carousel .carousel-indicators .active {
+            background-color: #025fff;
+        }
+    .carousel .carousel-window {
+        padding-top: 41px;
+        position: relative;
+        overflow: hidden;
+    }
+    .carousel .carousel-slides {
+        display: flex;
+        transition: transform 0.5s;
+    }
+
+    .carousel .carousel-item h2{
+        display: block;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 49px;
+        padding-bottom: 14px;
+        color: #10133A;
+        border-bottom: 3px solid black;
+        margin-bottom: 50px;
+        margin-right: 644px;
+        margin-left: 644px;
+        text-align: center;
+        border-bottom: 3px solid;
+    border-image: 
+    linear-gradient(
+       to left, 
+       #F6CF45, 
+       #EF4621
+    ) 1;
+       
+    }
+        .carousel .carousel-item img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 41px;
+       
+        }
+        .carousel .carousel-item p{
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            text-align: center;
+            width: 837px;
+            margin-top: 34px;
+            min-height: 99px;
+            margin-left: auto;
+            margin-right: auto;
+    
+        }
+    .carousel .carousel-prev, .carousel .carousel-next {
+        position: absolute;
+        top: 302px;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        height: 100px;
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        opacity: 0.7;
+        text-align: center;
+        font-size: 40px;
+        text-decoration: none;
+        
+    }
+    .carousel .carousel-prev:hover, .carousel .carousel-next:hover {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        
+    }
+    .carousel .carousel-prev {
+        left: 102px;
+    
+    }
+    .carousel .carousel-next {
+        right: 102px;
+    }
+
+
+
+    .video{
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+
+
+    .form{
+        
+        width: 856px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 90px;
+    }
+    .text input[type=text],[type=tel],select{
+        background: rgba(16, 19, 58,0.15);
+        border-radius: 50px;
+        width: 649px;
+        min-height: 85px;
+        margin-left: 45px;
+       
+    }
+    .text input,select{
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 41px;
+        color: black;
+
+    }
+    .text input[type=radio]{
+        margin-left: 45px;
+    }
+    .text label:not(.form-radio-hidden){
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 38px;
+        width: 142px;
+        display: inline-flex;
+        
+
+    }
+    .text input[type=text]::placeholder {
+        color: #212529;
+        opacity: 0.4;
+        padding-left: 50px;
+      }
+      .text input[type=tel]::placeholder {
+        color: black;
+        
+        padding-left: 50px;
+      }
+     .text{
+        display: flex;
+        flex-direction: column;
+        row-gap: 79px;
+        align-items: flex-start;
+    }
+    .profile .head{
+        font-weight: 700;
+        display: block;
+        font-size: 36px;
+        line-height: 49px;
+        padding-bottom: 14px;
+        color: #10133A;
+        border-bottom: 3px solid black;
+        margin-bottom: 91px;
+        border-bottom: 3px solid;
+        border-image: 
+        linear-gradient(
+           to left, 
+           #F6CF45, 
+           #EF4621
+        ) 1;
+    }
+
+    .text select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url("../img/Vector\ 117.png") 96% / 10% no-repeat  rgba(16, 19, 58,0.15);
+        border: none;
+        }
+        select::-ms-expand { 
+            display: none; /* удалите стрелку по умолчанию в IE 10 и 11 */
+            }
+    .address {
+        margin-bottom: 61px;
+        display: flex;
+        flex-direction: row;
+            }
+            .address1{
+                display: flex;
+                flex-direction: column;
+                row-gap: 35px;
+                justify-content: flex-start;
+                margin-left: 45px;
+            }
+    
+            .form-radio-hidden{
+                display: flex;
+                flex-direction: row;
+                height: 28px;
+                position: relative;
+                align-items: center;
+              }
+              
+              /* Скрываем штатные радио-кнопки */
+              .form-radio-hidden input{
+                position: absolute;
+                opacity: 0;
+                display: block;
+                height: 0;
+                width: 0;
+              }
+              
+              /* Устанавливаем параметры элементов, заменяющих штатные радио-кнопки */
+              .form-radio-hidden .radio{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                display: block;
+                position: relative;
+                height: 48px;
+                width: 48px;
+                border-radius: 50%;
+                border: 2px solid black;
+                background-color: white;
+                box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+                cursor: pointer;
+                outline: none;
+                box-sizing: border-box;
+                transition: .5s all;
+              }
+              
+              /* Устанавливаем параметры элементов, заменяющих штатные радио-кнопки при наведении */
+              .form-radio-hidden:hover .radio{
+                background-color: white;
+                box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
+              }
+              
+              /* Устанавливаем параметры элементов, заменяющих штатные выбранные радио-кнопки */
+              .form-radio-hidden input:checked + .radio{
+                border-color: black;
+                background-color: white;
+                box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
+                cursor: default;
+              }
+              
+              /* Добавляем декор */
+              .form-radio-hidden:hover .radio::before, .form-radio-hidden input:checked + .radio::before{
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                background-color: black;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+              }
+              .form-radio-hidden input:checked + .radio::before{
+                background-color: black;
+                box-shadow: 1px 2px 2px 0 rgba(0,0,0,0.2);
+              }
+              
+              /* Устанавливаем параметры подписей радио-кнопок */
+              .form-radio-hidden input + .radio + .label{
+                color: #777;
+                cursor: pointer;
+                font-family: inherit;
+                margin-left: 28px;
+                align-self: center;
+                font-size: 28px;
+                line-height: 38px;
+                color: #000000;
+                font-weight: 400;
+              }
+              
+              /* Устанавливаем параметры подписей выбранных радио-кнопок */
+              .form-radio-hidden input:checked + .radio + .text{
+                color: #555;
+                cursor: default;
+              }
+                .profile button{
+                    width: 225px;
+                    height: 69px;
+                    background: linear-gradient(90deg, #EF4621 0%, #F6CF45 100%);
+                    border-radius: 50px;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 33px;
+                    color: #FFFFFF;
+                    position: relative;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+     .map{
+       
+     }
+     .mapblock{
+        max-width: 1444px;
+        height: 752px;
+        margin: auto;
+        
+     }
+     .map>div{
+        position: relative;
+        width: 385px;
+        min-height: 533px;
+        
+     }
+    .footer-nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 131px;
+        color:  white;
+        
+    }
