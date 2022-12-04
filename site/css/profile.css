@@ -1,0 +1,49 @@
+main {
+    background-color: #e9edf3;
+    min-height: 1000px;
+}
+
+.profile_full_name_student{
+    margin-top: 40px;
+    font-size: 24px;
+    font-family: "Lora", serif;
+    font-variant: normal;
+    color: #3a547f;
+    margin-left: 20px;
+}
+
+.profile_text  {
+    font-size: 14px;
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-family: "Lora", serif;
+    font-variant: normal;
+}
+
+.profile_info {
+    font-size: 14px;
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-family: "Lora", serif;
+    font-variant: normal;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.profile_address {
+    font-size: 14px;
+    color: rgb(69, 69, 233);
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+
+.profile_block {
+    padding-top: 50px;
+    margin-left: 300px;
+    margin-right: 200px;
+    background-color: white !important;
+}
