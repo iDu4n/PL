@@ -14,7 +14,6 @@ include ('server.php');
 </head>
 
 <body>
-  
   <div class="form">
       
       <ul class="tab-group">
@@ -28,22 +27,22 @@ include ('server.php');
           <h1>Авторизация</h1>
           
           <form method="post">
-          <?php include('error.php') ?>
+          
             <div class="field-wrap">
             <label>
               E-mail адрес<span class="req">*</span>
             </label>
-            <input type="text" name="Address"/>
+            <input type="email"required autocomplete="off" name="email"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Пароль<span class="req">*</span>
             </label>
-            <input type="password" name="password"/>
+            <input type="password"required autocomplete="off" id='password'/>
           </div>
 
-          <button type="submit" class="button button-block"  name="log-in">Войти</button>
+          <button type="submit" class="button button-block" id="login">Войти</button>
           
           </form>
 

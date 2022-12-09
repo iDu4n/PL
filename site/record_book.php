@@ -52,7 +52,7 @@ $result = mysqli_query($induction, "SELECT * FROM `record_book`");
                         <div class="header_wrap d-flex justify-content-between align-items-center">
                             <div class="header_left">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="https://bsuir.by" target="_blank">
                                         <img src="img/logo.jpg" style = "width: 70px;" alt="">
                                     </a>
                                 </div>
@@ -93,7 +93,7 @@ $result = mysqli_query($induction, "SELECT * FROM `record_book`");
                         <th>Часы</th>
                         <th>Форма контроля</th>
                         <th class = "rb_mark">Оценка</th>
-                        <th>Дата экзамена</th>
+                        <th>Дата проведения</th>
                         <th class = "rb_teacher">Преподаватель</th>
                         <th>Количество пересдач</th>
                     </tr>
@@ -106,7 +106,7 @@ $result = mysqli_query($induction, "SELECT * FROM `record_book`");
                         <td><?php  echo $record_book ['Subject']; ?></td>
                         <td><?php  echo $record_book ['Hours']; ?></td>
                         <td><?php  echo $record_book ['Control_form']; ?></td>
-                        <td><?php  echo $record_book ['Mark']; ?></td>
+                        <td><?php  if($record_book['Control_form'] != 'Зачёт') {echo $record_book ['Mark']; } else {echo "--";} ?></td>
                         <td><?php  echo $record_book ['Exam_date']; ?></td>
                         <td><?php  echo $record_book ['Full_name_teacher']; ?></td>
                         <td><?php  echo $record_book ['Retakes']; ?></td>

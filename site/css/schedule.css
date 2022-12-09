@@ -16,8 +16,9 @@ main {
     font-weight: 500;
     font-size: 30px;
     padding-left: 10px;
-    font-family: "Lora",serif;
     text-align: center;
+    font-family: "Lora",serif;
+    font-weight: 600;
   }
 
   table {
@@ -41,7 +42,7 @@ main {
   }
   tbody {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 41px;
   }
   tfoot{
@@ -53,7 +54,21 @@ main {
 
   th,td{
     border: 1px solid black;
-    width: 50%;
+    width: 14%;
     background-color: #FFFFFF;
     text-align: center;
+  }
+
+  .rb_mark {
+    width: 9%;
+  }
+
+  .rb_teacher {
+    width: 19%;
+  }
+
+  .Name_teach {
+    color: black;
+    font-weight: 300;
+    font-size: 14px;
   }

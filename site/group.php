@@ -52,7 +52,7 @@ $result = mysqli_query($induction, "SELECT * FROM `my_group`");
                         <div class="header_wrap d-flex justify-content-between align-items-center">
                             <div class="header_left">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="https://bsuir.by" target="_blank">
                                         <img src="img/logo.jpg" style = "width: 70px;" alt="">
                                     </a>
                                 </div>
@@ -85,7 +85,7 @@ $result = mysqli_query($induction, "SELECT * FROM `my_group`");
 <main>
     <div style = "padding-top: 30px; padding-left: 60px; padding-right: 60px;">
         <div class = "group_block" style = "border-radius: 10px;">
-        <p class = group_text>Группа cтудента </p>
+        <p class = group_text>Группа </p>
             <table>
                 <thead>
                     <tr>

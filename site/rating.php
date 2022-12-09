@@ -19,10 +19,10 @@ $result = mysqli_query($induction, "SELECT * FROM `rating`");
 
 <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpg">
 
-<link rel="stylesheet" href="css/rating.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="/css/rating.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/themify-icons.css">
 <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -52,7 +52,7 @@ $result = mysqli_query($induction, "SELECT * FROM `rating`");
                         <div class="header_wrap d-flex justify-content-between align-items-center">
                             <div class="header_left">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="https://bsuir.by" target="_blank">
                                         <img src="img/logo.jpg" style = "width: 70px;" alt="">
                                     </a>
                                 </div>
@@ -85,22 +85,49 @@ $result = mysqli_query($induction, "SELECT * FROM `rating`");
 <main>
     <div style = "padding-top: 30px; padding-left: 60px; padding-right: 60px;">
         <div class = "group_block" style = "border-radius: 10px;">
-        <p class = group_text>Группа cтудента </p>
+        <p class = "group_text">Рейтинг</p>
             <table>
                 <thead>
                     <tr>
-                        <th>ФИО студента</th>
-                        <th>Электронная почта</th>
+                        <th>Предмет</th>
+                        <th>Оценки</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php    while ($group = mysqli_fetch_assoc($result))
+                <?php    while ($rating = mysqli_fetch_assoc($result))
                         {
+                            $i = 0;
+                            $result1 = mysqli_query($induction, "SELECT * FROM `rating`"); 
+                            $result3 = mysqli_query($induction, "SELECT * FROM `rating`"); 
+                            $rating3 = mysqli_fetch_assoc($result3);
+                            while ($rating3 != $rating)
+                            { 
+                                if ($rating['Subject'] == $rating3['Subject']){
+                                       $i=1;
+                                }
+                                $rating3 = mysqli_fetch_assoc($result3);
+                            }
                 ?>
+                <?php if ($i==0) {
+                    ?>
                     <tr>
-                        <td><?php  echo $group['Full_name_student']; ?></td>
-                        <td><?php  echo $group['Address']; ?></td>
+                        <td style = "height: 0;"><?php  if($i==0) {echo $rating ['Subject'];  }?></td>
+                        <td><?php 
+                       
+                        
+                            while ($rating1 = mysqli_fetch_assoc($result1))
+                            {
+                                if ($rating1['Subject'] == $rating['Subject']){
+                                    echo $rating1 ['Mark'];
+                                    echo "&nbsp"; 
+                                
+                                }
+                            }   
+                        }
+                        
+                        ?></td>
                 <?php  
+                            $rating2 = $rating;
                         } 
                 ?>
                     </tr>

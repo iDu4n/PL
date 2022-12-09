@@ -1,8 +1,8 @@
 
 <?php
-
+    session_start();
     include "databases.php";
-
+    
     $result = mysqli_query($induction, "SELECT * FROM `profile`");
 
     $Full_name_student = mysqli_fetch_assoc($result);
@@ -39,7 +39,7 @@
                                     <p><span>+375 17 293-88-15</span> <span>info@bsuir.by</span></p>
                                 </div>
                                 <div class="text_wrap">
-                                    <p><a href="index.php"> <i class="ti-user"></i>  Войти</a></p>
+                                    <p><a href="logout.php"> <i class="ti-user"></i>  Выйти</a></p>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="header_wrap d-flex justify-content-between align-items-center">
                                 <div class="header_left">
                                     <div class="logo">
-                                        <a href="index.html">
+                                        <a href="https://bsuir.by" target="_blank">
                                             <img src="img/logo.jpg" style = "width: 70px;" alt="">
                                         </a>
                                     </div>
