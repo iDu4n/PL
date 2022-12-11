@@ -2,6 +2,7 @@
 <?php
 
 include "databases.php";
+include "server.php";
 
 $result = mysqli_query($induction, "SELECT * FROM `schedule`");
 
@@ -38,7 +39,7 @@ $result = mysqli_query($induction, "SELECT * FROM `schedule`");
                                 <p><span>+375 17 293-88-15</span> <span>info@bsuir.by</span></p>
                             </div>
                             <div class="text_wrap">
-                                <p><a href="index.php"> <i class="ti-user"></i>  Войти</a></p>
+                                <p><a href="index.php"> <i class="ti-user"></i>  Выйти</a></p>
                             </div>
                         </div>
                     </div>
@@ -61,7 +62,7 @@ $result = mysqli_query($induction, "SELECT * FROM `schedule`");
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a  href="profile.php">Профиль</a></li>
+                                            <?php if($_SESSION['user']['role'] == 'student' || $_SESSION['user']['role'] == 'admin') { ?> <li><a  href="profile.php">Профиль</a></li> <?php } ?>
                                             <li><a href="group.php">Группа</a></li>
                                             <li><a href="rating.php">Рейтинг</a></li>
                                             <li><a href="record_book.php">Зачётка</a></li>
@@ -206,6 +207,24 @@ $result = mysqli_query($induction, "SELECT * FROM `schedule`");
                     </tr>
                 </tbody>
             </table>
+
+            <?php if($_SESSION['user']['role'] == 'admin') 
+                {
+            ?>
+                <form class="form" action="Functions.php" method="post">
+                    <h3 class="order-call-title">Ввести/удалить/изменить оценку</h3>
+
+                    <input type="text" class="text-input small-text" name="subject" placeholder="Предмет" required>
+                    <input type="datetime" class="text-input small-text" name="datetime" placeholder="Дата и время" required>
+                    <input type="text" class="text-input small-text" name="full_name_teacher" placeholder="ФИО преподавателя" required>
+                
+                    <p><input class="submit-btn small-text" type="submit" name="AddSchedule" value="Ввести оценку">
+                    <input class="submit-btn small-text" type="submit" name="DeleteSchedule" value="Удалить оценку">
+                    <input class="submit-btn small-text" type="submit" name="UpdateSchedule" value="Редактировать оценку"></p>
+                </form>
+            <?php 
+                }
+            ?>
         </div>
     </div>
 </main>

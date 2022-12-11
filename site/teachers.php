@@ -1,7 +1,10 @@
 
 <?php
 
+session_start();
+
 include "databases.php";
+include "server.php";
 
 $result = mysqli_query($induction, "SELECT * FROM `teachers`");
 
@@ -38,7 +41,7 @@ $result = mysqli_query($induction, "SELECT * FROM `teachers`");
                                 <p><span>+375 17 293-88-15</span> <span>info@bsuir.by</span></p>
                             </div>
                             <div class="text_wrap">
-                                <p><a href="index.php"> <i class="ti-user"></i>  Войти</a></p>
+                                <p><a href="index.php"> <i class="ti-user"></i>  Выйти</a></p>
                             </div>
                         </div>
                     </div>
@@ -61,7 +64,7 @@ $result = mysqli_query($induction, "SELECT * FROM `teachers`");
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a  href="profile.php">Профиль</a></li>
+                                            <?php if($_SESSION['user']['role'] == 'student' || $_SESSION['user']['role'] == 'admin') { ?> <li><a  href="profile.php">Профиль</a></li> <?php } ?>
                                             <li><a href="group.php">Группа</a></li>
                                             <li><a href="rating.php">Рейтинг</a></li>
                                             <li><a href="record_book.php">Зачётка</a></li>

@@ -13,6 +13,15 @@
   justify-content: start;
 }
 
+.order-call-title {
+  margin-top: 30px;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 /* Normal desktop :1200px. */
 /* Normal desktop :992px. */
 /* Tablet desktop :768px. */

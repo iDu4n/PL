@@ -2,8 +2,17 @@
 <?php
 
 include "databases.php";
+include "server.php";
 
-$result = mysqli_query($induction, "SELECT * FROM `my_group`");
+$result = mysqli_query($induction, "SELECT * FROM `my_group` ORDER BY `Full_name_student`");
+
+$Full_name_student = $_GET['full_name_student'];
+if($Full_name_student == '1') {
+$result = mysqli_query($induction, "SELECT * FROM `my_group` ORDER BY `Full_name_student`");
+}
+if($Full_name_student == '2') {
+$result = mysqli_query($induction, "SELECT * FROM `my_group` ORDER BY `Full_name_student` DESC");
+}
 
 ?>
 
@@ -13,7 +22,7 @@ $result = mysqli_query($induction, "SELECT * FROM `my_group`");
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Профиль</title>
+<title>Группа</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -38,7 +47,7 @@ $result = mysqli_query($induction, "SELECT * FROM `my_group`");
                                 <p><span>+375 17 293-88-15</span> <span>info@bsuir.by</span></p>
                             </div>
                             <div class="text_wrap">
-                                <p><a href="index.php"> <i class="ti-user"></i>  Войти</a></p>
+                                <p><a href="index.php"> <i class="ti-user"></i>  Выйти</a></p>
                             </div>
                         </div>
                     </div>
@@ -61,7 +70,7 @@ $result = mysqli_query($induction, "SELECT * FROM `my_group`");
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a  href="profile.php">Профиль</a></li>
+                                            <?php if($_SESSION['user']['role'] == 'student' || $_SESSION['user']['role'] == 'admin') { ?> <li><a  href="profile.php">Профиль</a></li> <?php } ?>
                                             <li><a href="group.php">Группа</a></li>
                                             <li><a href="rating.php">Рейтинг</a></li>
                                             <li><a href="record_book.php">Зачётка</a></li>
@@ -106,6 +115,13 @@ $result = mysqli_query($induction, "SELECT * FROM `my_group`");
                     </tr>
                 </tbody>
             </table>
+            <form class="form" style="padding-left: 32%; padding-bottom: 50px;" method="get">
+                <h3 class="order-call-title">Отсортировать группу студентов по ФИО</h3>
+                <h3 class="order-call-title" style="margin-top: 0px;">(1 – по возрастанию, 2 – по убыванию)</h3>
+                <input type="text" class="text-input small-text" style="width: 60%;" name="full_name_student" placeholder="Введите 1 или 2" required>
+                
+                <p><input class="submit-btn small-text" type="submit" name="FindStudent" value="Отсортировать группу студентов"></p>
+            </form>
         </div>
     </div>
 </main>

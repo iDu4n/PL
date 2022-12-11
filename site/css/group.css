@@ -16,6 +16,7 @@
       font-weight: 500;
       font-size: 30px;
       padding-left: 10px;
+      padding-right: 90px;
       font-family: "Lora",serif;
       text-align: center;
     }
@@ -56,4 +57,64 @@
       width: 50%;
       background-color: #FFFFFF;
       text-align: center;
+    }
+
+    .text-input {
+      margin-bottom: 20px;
+      height: 35px;
+      width: 40%;
+      line-height: 27px;
+      box-sizing: border-box;
+      padding: 3px;
+    }
+    
+    #time.text-input {
+      margin-bottom: 0
+    }
+  
+    .small-text {
+      font-size: 13px;
+      line-height: 15px;
+    }
+  
+    #form .order-call-title{
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+  
+    .phone-label {
+      max-width: inherit;
+      box-sizing: border-box;
+    
+      display: flex;
+      align-items: center;
+    }
+  
+    #form .order-call-title{
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+  
+    .form {
+      padding: 55px 168px 60px 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    .footer-text_container .footer-text .footer-icon:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+    
+    .footer-text_container .footer-text .footer-icon {
+      text-decoration: none;
+    }
+  
+    .footer-text {
+      font-size: 14px;
+      line-height: 20px;
     }

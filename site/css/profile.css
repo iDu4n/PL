@@ -5,6 +5,7 @@ main {
 
 .profile_full_name_student{
     margin-top: 40px;
+    padding-left: 600px;
     font-size: 24px;
     font-family: "Lora", serif;
     font-variant: normal;
@@ -13,8 +14,8 @@ main {
 }
 
 .profile_text  {
-    font-size: 14px;
-    padding-left: 10px;
+    font-size: 16px;
+    padding-left: 600px;
     margin-top: 0px;
     margin-bottom: 0px;
     color: black;
@@ -23,7 +24,7 @@ main {
 }
 
 .profile_info {
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -35,10 +36,10 @@ main {
 }
 
 .profile_address {
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(69, 69, 233);
     margin-bottom: 0px;
-    padding-left: 10px;
+    padding-left: 600px;
 }
 
 .profile_block {
@@ -47,3 +48,4 @@ main {
     margin-right: 200px;
     background-color: white !important;
 }
+

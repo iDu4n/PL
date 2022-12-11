@@ -1,16 +1,17 @@
 <?php
+
 session_start();
+
 $login = "";
 $email = "";
 $errors = array(); 
 
-$db = mysqli_connect('127.0.0.1', 'root', '', 'DB');
+$db = mysqli_connect('127.0.0.1', 'root', '', 'Project_DB');
 
 if ($db == false)
 {
     echo "Ошибка подключения";
 }
-
 
 if (isset($_POST['log-in'])) 
 {
@@ -21,6 +22,7 @@ if (isset($_POST['log-in']))
     {
         array_push($errors, "Вы не ввели email");
     }
+    
     if (empty($password)) 
     {
         array_push($errors, "Вы не ввели пароль");
@@ -35,9 +37,12 @@ if (isset($_POST['log-in']))
         {
             $user = mysqli_fetch_assoc($results);
             $_SESSION['user'] = [
-                "address" => $user['Address']
+                "address" => $user['Address'],
+                "role" => $user['role']
             ];
-            header('location: profile.php');
+            if($_SESSION['user']['role'] == 'student') {header('location: profile.php');}
+            else {header ('location: teachers.php');}
+            
         } else {
             array_push($errors, "Не верная почта или пароль");
         }

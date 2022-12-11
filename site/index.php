@@ -13,9 +13,9 @@ include ('server.php');
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body style="background: url(./img/mountains.jpg) no-repeat; background-size: 100%;">
   
-  <div class="form">
+  <div class="form" style="margin-top: 400px;">
       
       <ul class="tab-group">
         <li class="tab"><a href="#login">Log In</a></li>
@@ -51,10 +51,10 @@ include ('server.php');
         
       </div>
       
-</div>
+  </div>
    
 
-    <script src="js/log-in.js"></script>
+  <script src="js/log-in.js"></script>
 
 </body>
 </html>
